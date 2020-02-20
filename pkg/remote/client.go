@@ -4,14 +4,15 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/grafana/grafana_plugin_model/go/datasource"
-	"github.com/pkg/errors"
-	"golang.org/x/net/context/ctxhttp"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"path"
 	"strings"
+
+	"github.com/grafana/grafana_plugin_model/go/datasource"
+	"github.com/pkg/errors"
+	"golang.org/x/net/context/ctxhttp"
 )
 
 type ResponseError struct {

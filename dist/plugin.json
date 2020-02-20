@@ -32,7 +32,7 @@
     "updated": "2018-07-02"
   },
   "dependencies": {
-    "grafanaVersion": "4.6.2+",
+    "grafanaVersion": "6.6.0+",
     "plugins": []
   }
 }

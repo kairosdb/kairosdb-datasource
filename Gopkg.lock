@@ -10,15 +10,14 @@
   version = "v1.1.1"
 
 [[projects]]
-  digest = "1:be408f349cae090a7c17a279633d6e62b00068e64af66a582cae0983de8890ea"
+  digest = "1:7ae311278f7ccaa724de8f2cdec0a507ba3ee6dea8c77237e8157bcf64b0f28b"
   name = "github.com/golang/mock"
   packages = ["gomock"]
   pruneopts = "UT"
-  revision = "9fa652df1129bef0e734c9cf9bf6dbae9ef3b9fa"
-  version = "1.3.1"
+  revision = "3dcdcb6994c4de42a73bd2e4790178be3ed4554b"
+  version = "v1.4.0"
 
 [[projects]]
-  branch = "master"
   digest = "1:f5ce1529abc1204444ec73779f44f94e2fa8fcdb7aca3c355b0c95947e4005c6"
   name = "github.com/golang/protobuf"
   packages = [
@@ -29,15 +28,16 @@
     "ptypes/timestamp",
   ]
   pruneopts = "UT"
-  revision = "b285ee9cfc6c881bb20c0d8dc73370ea9b9ec90f"
+  revision = "6c65a5562fc06764971b7c5d05c76c75e84bdbf7"
+  version = "v1.3.2"
 
 [[projects]]
   branch = "master"
-  digest = "1:a21eb24449bd5250ba435ac4c857f654aa162b3e03f4da511a7363d521a5ed19"
+  digest = "1:39a4eab174e14ff250f9808ebee4850d661ff12d2145507999fd6458c1d25d1a"
   name = "github.com/grafana/grafana_plugin_model"
   packages = ["go/datasource"]
   pruneopts = "UT"
-  revision = "84176c64269d8060f99e750ee8aba6f062753336"
+  revision = "1fc953a61fb42f060f7857f989d1319cede48a39"
 
 [[projects]]
   digest = "1:cf6b61e1b4c26b0c7526cee4a0cee6d8302b17798af4b2a56a90eedac0aef11a"
@@ -48,19 +48,23 @@
   version = "v0.9.2"
 
 [[projects]]
-  digest = "1:82320f8469d1524df337bc315a38c87644765cd89ec4cf3cbda249a3acdde671"
+  digest = "1:5d8ebc1cb15676990b1cb8b969b86de8549b21a3729bd2cf11754211e1919131"
   name = "github.com/hashicorp/go-plugin"
-  packages = ["."]
+  packages = [
+    ".",
+    "internal/plugin",
+  ]
   pruneopts = "UT"
-  revision = "e8d22c780116115ae5624720c9af0c97afe4f551"
+  revision = "9e3e1c37db188a1acb66561ee0ed4bf4d5e77554"
+  version = "v1.0.1"
 
 [[projects]]
   branch = "master"
-  digest = "1:a4826c308e84f5f161b90b54a814f0be7d112b80164b9b884698a6903ea47ab3"
+  digest = "1:c408c83758fa11ecb8db9b486e3045193bc8f5545d19d7bfcc78c791d5257132"
   name = "github.com/hashicorp/yamux"
   packages = ["."]
   pruneopts = "UT"
-  revision = "2f1d1f20f75d5404f53b9edf6b53ed5505508675"
+  revision = "df201c70410deac145ff09e1126f3f8834ead1ec"
 
 [[projects]]
   digest = "1:42eb1f52b84a06820cedc9baec2e710bfbda3ee6dac6cdb97f8b9a5066134ec6"
@@ -71,20 +75,20 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:9ec6cf1df5ad1d55cf41a43b6b1e7e118a91bade4f68ff4303379343e40c0e25"
+  digest = "1:109a4e5eccbcaea2e63f89e2eccecbd7f427a893a8712defce705e14c1d51d3c"
   name = "github.com/oklog/run"
   packages = ["."]
   pruneopts = "UT"
-  revision = "4dadeb3030eda0273a12382bb2348ffc7c9d1a39"
-  version = "v1.0.0"
+  revision = "9c53bcd6fefd554246da88d55efcc283aff63659"
+  version = "v1.1.0"
 
 [[projects]]
-  digest = "1:cf31692c14422fa27c83a05292eb5cbe0fb2775972e8f1f8446a71549bd8980b"
+  digest = "1:9e1d37b58d17113ec3cb5608ac0382313c5b59470b94ed97d0976e69c7022314"
   name = "github.com/pkg/errors"
   packages = ["."]
   pruneopts = "UT"
-  revision = "ba968bfe8b2f7e042a574c888954fccecfa385b4"
-  version = "v0.8.1"
+  revision = "614d223910a179a466c1767a985424175c39b465"
+  version = "v0.9.1"
 
 [[projects]]
   digest = "1:0028cb19b2e4c3112225cd871870f2d9cf49b9b4276531f03438a88e94be86fe"
@@ -95,16 +99,16 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:972c2427413d41a1e06ca4897e8528e5a1622894050e2f527b38ddf0f343f759"
+  digest = "1:8548c309c65a85933a625be5e7d52b6ac927ca30c56869fae58123b8a77a75e1"
   name = "github.com/stretchr/testify"
   packages = ["assert"]
   pruneopts = "UT"
-  revision = "ffdc059bfe9ce6a4e144ba849dbedead332c6053"
-  version = "v1.3.0"
+  revision = "221dbe5ed46703ee255b1da0dec05086f5035f62"
+  version = "v1.4.0"
 
 [[projects]]
   branch = "master"
-  digest = "1:1b13e8770142a9251361b13a3b8b9b77296be6fa32856c937b346a45f93c845c"
+  digest = "1:be7ea8c9ac48b8b0b9e91e32760f59c23de8a5e3de03c918f56e0c08a6e03017"
   name = "golang.org/x/net"
   packages = [
     "context",
@@ -117,15 +121,15 @@
     "trace",
   ]
   pruneopts = "UT"
-  revision = "f3200d17e092c607f615320ecaad13d87ad9a2b3"
+  revision = "6afb5195e5aab057fda82e27171243402346b0ad"
 
 [[projects]]
   branch = "master"
-  digest = "1:668e8c66b8895d69391429b0f64a72c35603c94f364c94d4e5fab5053d57a0b6"
+  digest = "1:fea09edda033799f8e99ab9042bda910bf1e3bf088c03eaf2ba8aba3adbbc8bf"
   name = "golang.org/x/sys"
   packages = ["unix"]
   pruneopts = "UT"
-  revision = "ad28b68e88f12448a1685d038ffea87bbbb34148"
+  revision = "9fbb57f87de9ccfe3a99d4e3270ce8a926ebba4f"
 
 [[projects]]
   digest = "1:8d8faad6b12a3a4c819a3f9618cb6ee1fa1cfc33253abeeea8b55336721e3405"
@@ -154,17 +158,19 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:583a0c80f5e3a9343d33aea4aead1e1afcc0043db66fdf961ddd1fe8cd3a4faf"
+  digest = "1:0c679e19d1865dd65e7ec400bf9562d8f161cf59c4f74c0bb50f365fc9fb19eb"
   name = "google.golang.org/genproto"
   packages = ["googleapis/rpc/status"]
   pruneopts = "UT"
-  revision = "fb225487d10142b5bcc35abfc6cb9a0609614976"
+  revision = "0452cf42e150a6aeb2c8615de02e260ae83d9873"
 
 [[projects]]
-  digest = "1:64657a7d01c4377b9456d8eaf6ad31b244e3a09a9d8d5a321eb0b1d4bd16a46c"
+  digest = "1:b6e84feae61eec56ea0c3ddcec7f331d8be4b2ef51945ad8bcc3e43614165fb0"
   name = "google.golang.org/grpc"
   packages = [
     ".",
+    "attributes",
+    "backoff",
     "balancer",
     "balancer/base",
     "balancer/roundrobin",
@@ -182,10 +188,13 @@
     "internal/backoff",
     "internal/balancerload",
     "internal/binarylog",
+    "internal/buffer",
     "internal/channelz",
     "internal/envconfig",
     "internal/grpcrand",
     "internal/grpcsync",
+    "internal/resolver/dns",
+    "internal/resolver/passthrough",
     "internal/syscall",
     "internal/transport",
     "keepalive",
@@ -193,15 +202,22 @@
     "naming",
     "peer",
     "resolver",
-    "resolver/dns",
-    "resolver/passthrough",
+    "serviceconfig",
     "stats",
     "status",
     "tap",
   ]
   pruneopts = "UT"
-  revision = "869adfc8d5a43efc0d05780ad109106f457f51e4"
-  version = "v1.21.0"
+  revision = "f5b0812e6fe574d90da76b205e9eb51f6ddb1919"
+  version = "v1.26.0"
+
+[[projects]]
+  digest = "1:55b110c99c5fdc4f14930747326acce56b52cfce60b24b1c03ef686ac0e46bb1"
+  name = "gopkg.in/yaml.v2"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "53403b58ad1b561927d19068c655246f2db79d48"
+  version = "v2.2.8"
 
 [solve-meta]
   analyzer-name = "dep"

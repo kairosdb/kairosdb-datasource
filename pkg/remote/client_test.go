@@ -4,12 +4,13 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
-	"github.com/grafana/grafana_plugin_model/go/datasource"
-	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"testing"
+
+	"github.com/grafana/grafana_plugin_model/go/datasource"
+	"github.com/stretchr/testify/assert"
 )
 
 type MockTransport struct {

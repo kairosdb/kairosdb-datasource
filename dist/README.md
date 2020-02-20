@@ -1,49 +1,58 @@
-Starting in Grafana 3.x the KairosDB data source is no longer included out of the box.
-
-But it is easy to install this plugin!
+Starting in Grafana 3.x the KairosDB data source is no longer included out of the box and is maintained here (currently tested against Grafana v6.6.0).
 
 ## Overview
-This plugin consists of two components: a frontend and a backend
+This [data source](https://grafana.com/docs/grafana/latest/plugins/developing/datasources/) plugin consists of two components: a frontend and a backend.
 
-The backend plugin provides support for [alerts](https://grafana.com/docs/alerting/rules), but is not required to use the frontend portion.
+The backend plugin provides support for [alerts](https://grafana.com/docs/alerting/rules), but is not required to use the frontend browser-based KairosDB connectivity.
 
-## Installation
-### Install to plugins directory
+## Install to Grafana plugins directory
 
-If you only need the frontend component you may clone the project directly into your Grafana plugin directory 
-(defaults to /var/lib/grafana/plugins if you're installing grafana with package). 
+Copy the plugin distribution directory (`./dist`) to the correctly named plugin directory as a child of the grafana plugins directory (eg `cp ./dist /var/lib/grafana/plugins/kairosdb-datasource`). This enables the frontend plugin and backend datasource proxy (enabled by configuring a KairosDB Datasource as "Access: Server"). The pre-compiled backend plugin supports linux-amd64 and macos (darwin-amd64). If you are running grafana on a different architecture you will need to compile the backend go project yourself.
 
-Then simply compile the code and restart Grafana:
+## Build
+### Frontend
+
+If building only the front end, the plugin can be cloned anywhere and built:
+
 ```
 git clone https://github.com/grafana/kairosdb-datasource
 cd kairosdb-datasource
-npm install
 make frontend
-sudo service grafana-server restart
 ```
 
-### Install with Alerts
-If you wish to build the backend plugin, as well, your project must be setup within a [Go workspace](https://golang.org/doc/code.html#Workspaces).
+The `./dist` directory can then be copied to your Grafana plugins directory:
+
+```
+cp /dist /var/lib/grafana/plugins/kairosdb-datasource
+```
+
+The alerting functionality will not be available without deploying the backend compiled binary.
+
+### Backend (Alerts)
+
+If you wish to build the backend plugin for your environment, your project must be setup within a [Go workspace](https://golang.org/doc/code.html#Workspaces).
 
 Ensure your GOPATH environment variable points to your workspace:
+
 ```
 export GOPATH=$HOME/go
 cd $GOPATH/src/github.com/kairosdb
-git clone https://github.com/grafana/kairosdb-datasource
+git clone https://github.com/kairosdb/kairosdb-datasource
+cd kairosdb-datasource
+# vendor dependencies are managed via "dep ensure"
+make backend
 ```
 
+This will attempt to build both the linux and macos binaries. The `./dist` directory can then be copied to your Grafana plugins directory:
 
-Edit your grafana.ini config file (Default location is at /etc/grafana/grafana.ini) to include the path to your clone. 
-Be aware that grafana-server needs read access to the project directory.
+```
+cp /dist /var/lib/grafana/plugins/kairosdb-datasource
+```
+## Docker
 
-```ini
-[plugin.kairosdb]
-path = $GOPATH/src/github.com/kairosdb/kairosdb-datasource
+A custom grafana image can built which includes the kairosdb plugin. After the above build steps have been completed:
 ```
-
-Then compile the code and restart Grafana:
+make docker
+docker run -d -p 3000:3000 --name=grafana grafana-kariosdb:latest
 ```
-npm install
-make
-sudo service grafana-server restart
-```
+The default login is admin:kairosdb. There are several build options that can be overridden. The base image was taken from [building-a-custom-grafana-image](https://grafana.com/docs/grafana/latest/installation/docker/#building-a-custom-grafana-image).

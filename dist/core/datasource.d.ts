@@ -26,6 +26,7 @@ export declare class KairosDBDatasource {
         value: any;
     }[]>;
     getMetricNames(): any;
+    testDatasource(): any;
     private getRequestBuilder(scopedVars?);
     private executeRequest(request);
     private handleMetricTagsResponse(response);

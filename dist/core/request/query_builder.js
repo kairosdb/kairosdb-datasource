@@ -45,6 +45,12 @@ System.register(["lodash", "../../beans/request/datapoints_query", "../../beans/
                         url: "/metricnames"
                     });
                 };
+                KairosDBQueryBuilder.prototype.buildHealthCheckQuery = function () {
+                    return this.buildRequest({
+                        method: "GET",
+                        url: "/health/check"
+                    });
+                };
                 KairosDBQueryBuilder.prototype.buildMetricTagsQuery = function (metricName, filters) {
                     if (filters === void 0) { filters = {}; }
                     return this.buildRequest({

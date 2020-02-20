@@ -1,18 +1,18 @@
 package main
 
 import (
-	grafana "github.com/grafana/grafana_plugin_model/go/datasource"
-	"github.com/grafana/kairosdb-datasource/pkg/datasource"
-	"github.com/grafana/kairosdb-datasource/pkg/logging"
-	"github.com/grafana/kairosdb-datasource/pkg/remote"
-	"github.com/hashicorp/go-plugin"
 	"net/http"
 	"time"
+
+	grafana "github.com/grafana/grafana_plugin_model/go/datasource"
+	"github.com/hashicorp/go-plugin"
+	"github.com/kyleboyle/kairosdb-datasource/pkg/datasource"
+	"github.com/kyleboyle/kairosdb-datasource/pkg/logging"
+	"github.com/kyleboyle/kairosdb-datasource/pkg/remote"
 )
 
 func main() {
 	logger := logging.Get("main")
-
 	logger.Info("Running KairosDB backend datasource")
 
 	// TODO support configuration of http client

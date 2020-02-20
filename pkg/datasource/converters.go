@@ -1,7 +1,7 @@
 package datasource
 
 import (
-	"github.com/grafana/kairosdb-datasource/pkg/remote"
+	"github.com/kyleboyle/kairosdb-datasource/pkg/remote"
 	"github.com/pkg/errors"
 	"regexp"
 	"strconv"

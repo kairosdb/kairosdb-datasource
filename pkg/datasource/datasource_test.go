@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"github.com/golang/mock/gomock"
 	grafana "github.com/grafana/grafana_plugin_model/go/datasource"
-	"github.com/grafana/kairosdb-datasource/pkg/datasource"
-	"github.com/grafana/kairosdb-datasource/pkg/datasource/internal/mock_datasource"
-	"github.com/grafana/kairosdb-datasource/pkg/remote"
+	"github.com/kyleboyle/kairosdb-datasource/pkg/datasource"
+	"github.com/kyleboyle/kairosdb-datasource/pkg/datasource/internal/mock_datasource"
+	"github.com/kyleboyle/kairosdb-datasource/pkg/remote"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

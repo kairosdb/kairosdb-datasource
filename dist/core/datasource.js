@@ -104,6 +104,10 @@ System.register(["lodash", "../beans/function", "../beans/request/legacy_target_
                 KairosDBDatasource.prototype.getMetricNames = function () {
                     return this.executeRequest(this.getRequestBuilder().buildMetricNameQuery());
                 };
+                KairosDBDatasource.prototype.testDatasource = function () {
+                    var resp = this.executeRequest(this.getRequestBuilder().buildHealthCheckQuery());
+                    return resp;
+                };
                 KairosDBDatasource.prototype.getRequestBuilder = function (scopedVars) {
                     if (scopedVars === void 0) { scopedVars = {}; }
                     return new query_builder_1.KairosDBQueryBuilder(this.withCredentials, this.url, "/api/v1", this.templateSrv, scopedVars);

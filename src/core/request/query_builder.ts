@@ -36,6 +36,13 @@ export class KairosDBQueryBuilder {
         });
     }
 
+    public buildHealthCheckQuery() {
+        return this.buildRequest({
+            method: "GET",
+            url: "/health/check"
+        });
+    }
+
     public buildMetricTagsQuery(metricName: string, filters = {}) {
         return this.buildRequest({
             data: this.buildTagsRequestBody(metricName, filters),

@@ -2,9 +2,10 @@ package remote
 
 import (
 	"encoding/json"
-	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestKairosDBRequest(t *testing.T) {

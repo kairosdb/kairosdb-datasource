@@ -95,6 +95,10 @@ export class KairosDBDatasource {
         return this.executeRequest(this.getRequestBuilder().buildMetricNameQuery());
     }
 
+    public testDatasource() {
+        return this.executeRequest(this.getRequestBuilder().buildHealthCheckQuery());
+    }
+
     private getRequestBuilder(scopedVars: any = {}): KairosDBQueryBuilder {
         return new KairosDBQueryBuilder(this.withCredentials, this.url, "/api/v1", this.templateSrv, scopedVars);
     }
